@@ -1,0 +1,8 @@
+.my-background {
+  width: 100%;
+  height: 400px; /* 根据需要调整高度 */
+  background: url(https://pub-f4aff4df59e242ca820cf648fbf6cefc.r2.dev/landscape-0612/boat-8394639_1280.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+

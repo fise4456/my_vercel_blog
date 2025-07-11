@@ -1,0 +1,35 @@
+/* 自定义 Markdown 标题字体大小（Butterfly） */
+
+.post-content h1 {
+  font-size: 28px;  /* 一级标题（#） */
+  font-weight: bold;
+  margin-top: 1.6em;
+  margin-bottom: 0.8em;
+}
+
+.post-content h2 {
+  font-size: 26px;  /* 二级标题（##）——明显提升 */
+  font-weight: bold;
+  margin-top: 1.4em;
+  margin-bottom: 0.7em;
+}
+
+.post-content h3 {
+  font-size: 23px;  /* 三级标题（###）——也提升 */
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.post-content h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post-content h5 {
+  font-size: 18px;
+}
+
+.post-content h6 {
+  font-size: 16px;
+}

@@ -1,0 +1,22 @@
+/* Markdown 标题字体大小调整 */
+.post-content h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.post-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post-content h3 {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* 正文内容字体大小和行高优化（放在最后）*/
+.post-content {
+  font-size: 18px !important;
+  line-height: 1.8;
+  color: #333;
+}

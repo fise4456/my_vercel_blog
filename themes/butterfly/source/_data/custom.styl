@@ -1,0 +1,30 @@
+// custom.styl
+// 用于 Butterfly 主题自定义顶部背景
+
+// 1️⃣ 覆盖 header 区域
+.site-header, #header {
+  background: url("https://pub-f4aff4df59e242ca820cf648fbf6cefc.r2.dev/landscape-0612/boat-8394639_1280.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+// 2️⃣ 可选：给整个 header 设置一个固定高度（按需）
+#header {
+  min-height: 300px;  // 你可以改成 400px、500px 看效果
+}
+
+// 3️⃣ 保证文字层级比背景高（可选）
+#header .site-brand, #header .site-nav {
+  position: relative;
+  z-index: 2;
+}
+
+// 4️⃣ 可以给背景加个半透明遮罩（更好看）
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);  // 0.3 可以改成 0~1，越大越暗
+  z-index: 1;
+}
+
+
