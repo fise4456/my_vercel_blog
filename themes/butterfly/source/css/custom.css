@@ -33,3 +33,12 @@
 .post-content h6 {
   font-size: 16px;
 }
+
+/* 首页 banner 强制显示自定义图片 */
+#page-header {
+    background-image: url("/img/index-cover.png") !important;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

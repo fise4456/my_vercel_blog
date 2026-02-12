@@ -141,6 +141,7 @@ post_meta:
     categories: true
     tags: true
     label: true
+    busuanzi: true  # <--- 手动增加这一行，注意缩进对齐
 
 # --------------------------------------
 # Index page settings
@@ -155,7 +156,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -170,7 +171,8 @@ subtitle:
   # 3 - jinrishici.com
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
-  sub: "思绪万千"
+  sub: []
+  
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -261,6 +263,9 @@ noticeOutdate:
 # --------------------------------------
 # Footer Settings
 # --------------------------------------
+# --------------------------------------
+# Footer Settings
+# --------------------------------------
 footer:
   owner:
     enable: true
@@ -268,6 +273,11 @@ footer:
   custom_text:
   # Copyright of theme and framework
   copyright: true
+  # 在这里新增不蒜子统计
+  busuanzi:
+    enable: true
+    site_uv: true
+    site_pv: true
 
 # --------------------------------------
 # Aside Settings
@@ -401,11 +411,11 @@ rightside_scroll_percent: false
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat the same value
 rightside_item_order:
-  enable: false
+  enable: true
   # Default: readmode,translate,darkmode,hideAside
   hide:
   # Default: toc,chat,comment
-  show:
+  show: search,darkmode
 
 # --------------------------------------
 # Global Settings
@@ -473,8 +483,8 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
-  placeholder:
+  use: local_search
+  placeholder: 搜索文章...
 
   # Algolia Search
   algolia_search:
@@ -483,13 +493,11 @@ search:
 
   # Local Search
   local_search:
-    # Preload the search data when the page loads.
-    preload: false
-    # Show top n results per article, show all results by setting to -1
-    top_n_per_article: 1
-    # Unescape html strings to the readable one.
-    unescape: false
-    CDN:
+    enable: true
+    edit: false
+    content: true
+    format: html
+    path: search.xml
 
   # Docsearch
   # https://docsearch.algolia.com/
@@ -528,6 +536,7 @@ comments:
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
   # Format of two comments system : Disqus,Waline
   use:
+    - Giscus  # 必须在这里写上 Giscus 才会生效
   # Display the comment name next to the button
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -624,13 +633,19 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo:
-  repo_id:
-  category_id:
-  light_theme: light
-  dark_theme: dark
-  js:
+  repo: ytang4456/giscus-comments
+  repo_id: R_kgDOO4Uxng
+  category: General
+  category_id: DIC_kwDOO4Uxns4CrNcx
   option:
+    mapping: pathname
+    strict: 0
+    reactions_enabled: 1
+    emit_metadata: 0
+    input_position: bottom
+    theme: light
+    lang: zh-CN
+    loading: lazy
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
@@ -682,7 +697,7 @@ crisp:
 baidu_analytics:
 
 # https://analytics.google.com/analytics/web/
-google_analytics:
+google_analytics: 
 
 # https://www.cloudflare.com/zh-tw/web-analytics/
 cloudflare_analytics:
@@ -731,8 +746,8 @@ ad:
 # --------------------------------------
 
 site_verification:
-  # - name: google-site-verification
-  #   content: xxxxxx
+  - name: google-site-verification
+    content: google727cedbe57455856
   # - name: baidu-site-verification
   #   content: xxxxxxx
 
@@ -1034,7 +1049,8 @@ css_prefix: true
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
-  head:
+  head: 
+    - <meta name="google-site-verification" content="google727cedbe57455856" />
     - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     # - <script src="xxxx"></script>

@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: FISHZ
-subtitle: 'FISHZ'
-description: 'Welcome to visit my blog'
-keywords:
+title: FISHZ | 思考者的感性与理性笔记  # 增加关键词，利于搜索
+# subtitle: ["Welcome"]
+description: '由工科视角出发，记录关于社会、心理与技术的思辨。' # 丰富描述，利于SEO
+keywords: 心理重构, 文化思辨, 技术笔记, 随笔
 author: JIN YU
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://ytang4456.github.io
+url: https://hexofish.ytang4456.sbs
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -28,7 +28,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: google727cedbe57455856.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -62,7 +62,7 @@ prismjs:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -top,-date
+  order_by: -top
 
 # Category & Tag
 default_category: uncategorized
@@ -102,8 +102,19 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/ytang4456/ytang4456.github.io.git
+  repo: git@github.com:ytang4456/ytang4456.github.io.git
   branch: main
+
+# SEO Settings
+sitemap:
+  path: sitemap.xml
+
+# 搜索配置
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
 
 
 
