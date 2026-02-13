@@ -108,6 +108,8 @@ deploy:
 # SEO Settings
 sitemap:
   path: sitemap.xml
+  tag: false
+  category: false
 
 # 搜索配置
 search:
