@@ -705,6 +705,9 @@ cloudflare_analytics:
 # https://clarity.microsoft.com/
 microsoft_clarity:
 
+# https://vercel.com/docs/analytics
+vercel_analytics: true
+
 # https://umami.is/
 umami_analytics:
   enable: false
